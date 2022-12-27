@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISH</title>
+    <link rel="icon" href="fish.ico">
+    <style>
+        
+        video {
+         position: relative;
+         width: 575px;
+         height: 50%;
+         top: 150px;
+         left: 30%;
+         opacity: 0;
+        }
+
+        .shadow {
+         position: absolute;
+         width: 576px;
+         height: 55%;
+         box-shadow: inset 0px 0px 36px 10px #ffffff;
+         border: 5px solid #ffffff;
+         top: 155px;
+         left: 30.2%;
+       }
+
+       .Press button{
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        background: none;
+       }
+
+
+       .memuevo {
+       -webkit-animation-duration: 1s;
+       animation-duration: 1s;
+       -webkit-animation-fill-mode: both;
+       animation-fill-mode: both;
+       }
+
+       .memuevo:hover {
+       -webkit-animation-iteration-count: infinite;
+       animation-iteration-count: infinite;
+       }
+
+
+       @-webkit-keyframes tada {
+       0% {
+       -webkit-transform: scale3d(1, 1, 1);
+       transform: scale3d(1, 1, 1);
+       }
+
+       10%, 20% {
+       -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+       transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+       }
+
+       30%, 50%, 70%, 90% {
+       -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+       transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+       }
+
+       40%, 60%, 80% {
+       -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+       transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+       }
+
+       100% {
+       -webkit-transform: scale3d(1, 1, 1);
+       transform: scale3d(1, 1, 1);
+       }
+       }
+
+      @keyframes tada {
+      0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+      }
+
+      10%, 20% {
+      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      }
+
+      30%, 50%, 70%, 90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      }
+
+      40%, 60%, 80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      }
+
+     100% {
+     -webkit-transform: scale3d(1, 1, 1);
+     -ms-transform: scale3d(1, 1, 1);
+     transform: scale3d(1, 1, 1);
+     }
+     }
+
+     .loco {
+     -webkit-animation-name: tada;
+     animation-name: tada;
+     }
+
+     #fish {
+     width: 300px;
+     height: 160px;
+     }
+
+    </style>
+</head>
+<body>
+    <video id="GoFish" loop>
+        <source src="spinfish.mp4">
+    </video>
+    <div class="shadow"></div>
+    <div class="Press">
+        <button onclick="playVid()" type="button"><img src="tunasign.png" alt="LeFishe" id="fish" class="memuevo loco"></button>
+    </div>
+    <script>
+        var vid = document.getElementById("GoFish");
+        var button = document.querySelector('.Press');
+            
+        function playVid() { 
+        vid.play();
+        vid.style.opacity = "100%";
+        button.style.opacity = "0";
+        } 
+    </script>
+</body>
+</html>
